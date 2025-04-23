@@ -1,0 +1,66 @@
+---
+title: "test"
+format: pptx
+editor: visual
+---
+
+```{r}
+# run this code - won't appear in prez
+#| message: false
+#| warning: false
+#| include: false
+
+#  uncomment this if you haven't installed aRtsy yet, otherwise leave commented out
+#install.packages("aRtsy") 
+
+library(aRtsy)
+library(ggplot2)
+```
+
+## OEHHA's DST
+
+[Write your name here]
+
+- Scott Coffin
+
+
+## Scott Coffin
+```{r}
+# Let's say "Hello World" in an artistic way using an algorithmically generated manner!
+set.seed(95605) #choose whatever number you want. I chose my zip code
+
+# make your personalized card 
+canvas_chladni( #choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
+  #choose a palette 
+  #colors = colorPalette("tuscany1"),  #default
+  # See options with ?colorPallete. Or choose whatever colors you want with names/hex codes/other packages!
+  colors = calecopal::cal_palette("superbloom3", n = 5),
+  waves = 5,
+  warp = 0.4,
+  angles = "perlin",
+  distances = "perlin",
+  resolution = 300) + #keep this at 300 to reduce render time
+  ggtitle("Scott Coffin") + # type your name here
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+```
+
+
+## Your Name Here
+```{r}
+# Let's say "Hello World" in an artistic way using an algorithmically generated manner!
+#set.seed() #choose whatever number you want. I chose my zip code
+
+# make your personalized card 
+# choose your function -> https://github.com/koenderks/aRtsy/tree/development
+
+yourfunctionhere( # replace with your actual function
+  colors = ,#yourcolorshere
+  resolution = 300) + #keep this at 300 to reduce render time
+  ggtitle("Your Name Here") + # type your name here
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+
+# once you're happy with your selection, save -> stage -> commit -> pull -> push!
+```
+
+
+
