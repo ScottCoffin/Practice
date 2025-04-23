@@ -17,20 +17,33 @@ library(aRtsy)
 library(ggplot2)
 ```
 
-## OEHHA's DST
+## EXAMPLE
+Here's a simple example
+```{r}
+# Let's say "Hello World" in an artistic way using an algorithmically generated manner!
+set.seed(1234) #choose whatever number you want
 
-[Write your name here]
+# make your personalized card 
+# choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
+EXAMPLE <- canvas_blacklight(
+  colors = colorPalette("tuscany1"), #choose your palette
+  resolution = 300 #keep this at 300!
+  ) +
+  ggtitle("EXAMPLE") +
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
-- Scott Coffin
-
+EXAMPLE
+```
 
 ## Scott Coffin
+Here's my contribution 
 ```{r}
 # Let's say "Hello World" in an artistic way using an algorithmically generated manner!
 set.seed(95605) #choose whatever number you want. I chose my zip code
 
 # make your personalized card 
-canvas_chladni( #choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
+# choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
+scott <- canvas_chladni( #replace your name
   #choose a palette 
   #colors = colorPalette("tuscany1"),  #default
   # See options with ?colorPallete. Or choose whatever colors you want with names/hex codes/other packages!
@@ -42,10 +55,13 @@ canvas_chladni( #choose from a large number of options! https://github.com/koend
   resolution = 300) + #keep this at 300 to reduce render time
   ggtitle("Scott Coffin") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+
+scott
 ```
 
 
 ## Your Name Here
+You can simply replace the following with your personalized selections
 ```{r}
 # Let's say "Hello World" in an artistic way using an algorithmically generated manner!
 #set.seed() #choose whatever number you want. I chose my zip code
@@ -53,14 +69,23 @@ canvas_chladni( #choose from a large number of options! https://github.com/koend
 # make your personalized card 
 # choose your function -> https://github.com/koenderks/aRtsy/tree/development
 
-yourfunctionhere( # replace with your actual function
+yourname <- yourfunctionhere( # replace with your actual function
   colors = ,#yourcolorshere
   resolution = 300) + #keep this at 300 to reduce render time
   ggtitle("Your Name Here") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
-# once you're happy with your selection, save -> stage -> commit -> pull -> push!
+yourname
+# once you're happy with your selection, place your name in the ggarrange below
+# then save -> stage -> commit -> pull -> push!
 ```
 
 
+## Our Mosaic
+```{r}
+ggpubr::ggarrange(EXAMPLE,
+                  scott
+                  # your name here
+                  )
+```
 
