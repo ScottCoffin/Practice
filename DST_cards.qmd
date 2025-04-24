@@ -50,7 +50,7 @@ set.seed(95605) #choose whatever number you want. I chose my zip code
 
 # make your personalized card 
 # choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
-scott <- canvas_chladni( #replace your name
+keita <- canvas_chladni( #replace your name
   #choose a palette 
   #colors = colorPalette("tuscany1"),  #default
   # See options with ?colorPallete. Or choose whatever colors you want with names/hex codes/other packages!
@@ -63,10 +63,12 @@ scott <- canvas_chladni( #replace your name
   ggtitle("Scott Coffin") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
-scott
+keita
 ```
 
-## Laurel Plummer
+
+Laurel Plummer
+Rose Schmitz
 
 You can simply replace the following with your personalized selections
 
@@ -77,13 +79,26 @@ You can simply replace the following with your personalized selections
 # make your personalized card 
 # choose your function -> https://github.com/koenderks/aRtsy/tree/development
 
-laurelplummer <- canvas_maze() # replace with your actual function
+
+laurelplummer <- canvas_maze() +# replace with your actual function
   #colors = ,#yourcolorshere
   #resolution = 200) + #keep this at 300 to reduce render time
   ggtitle("Laurel") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
-
 laurelplummer
+
+keita <- canvas_chladni(  # replace with your actual function
+ colors = colorPalette("dark2")) + #yourcolorshere
+  #resolution = 300) + #keep this at 300 to reduce render time
+  ggtitle("Keita")  # type your name here
+keita
+
+rose <- canvas_collatz( # replace with your actual function
+  colors = colorPalette("dark2")) + #keep this at 300 to reduce render time
+  ggtitle("Rose Schmitz") + # type your name here
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+rose
+
 # once you're happy with your selection, place your name in the ggarrange below
 # then save -> stage -> commit -> pull -> push!
 ```
@@ -92,7 +107,9 @@ laurelplummer
 
 ```{r}
 ggpubr::ggarrange(EXAMPLE,
-                 laurelplummer
-                  # your name here
-                  )
+                  laurelplummer,
+                  #scott,
+                  rose,
+                  keita
+            )
 ```
