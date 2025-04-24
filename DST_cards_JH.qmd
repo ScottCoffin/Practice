@@ -44,7 +44,7 @@ Here's my contribution
 ```{r}
 
 
-Jennifer
+scott
 ```
 
 ## Your Name Here
@@ -58,12 +58,13 @@ You can simply replace the following with your personalized selections
 # make your personalized card 
 # choose your function -> https://github.com/koenderks/aRtsy/tree/development
 
-Jennifer <- canvas_ant(colors = colorPalette("house") ,#yourcolorshere
+yourname <- yourfunctionhere( # replace with your actual function
+  colors = ,#yourcolorshere
   resolution = 300) + #keep this at 300 to reduce render time
-  ggtitle("Jennifer") + # type your name here
+  ggtitle("Your Name Here") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
-Jennifer
+yourname
 # once you're happy with your selection, place your name in the ggarrange below
 # then save -> stage -> commit -> pull -> push!
 ```
@@ -72,7 +73,7 @@ Jennifer
 
 ```{r}
 ggpubr::ggarrange(EXAMPLE,
-                  Jennifer
+                  scott
                   # your name here
                   )
 ```
