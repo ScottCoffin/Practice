@@ -47,7 +47,7 @@ set.seed(95605) #choose whatever number you want. I chose my zip code
 
 # make your personalized card 
 # choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
-scott <- canvas_chladni( #replace your name
+keita <- canvas_chladni( #replace your name
   #choose a palette 
   #colors = colorPalette("tuscany1"),  #default
   # See options with ?colorPallete. Or choose whatever colors you want with names/hex codes/other packages!
@@ -60,10 +60,14 @@ scott <- canvas_chladni( #replace your name
   ggtitle("Scott Coffin") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
-scott
+keita
 ```
 
+<<<<<<< HEAD
 ## Your Name Here
+=======
+## Rose Schmitz
+>>>>>>> a0bc78c29b5f07971c8c5ac701e89f38d0381d6f
 
 You can simply replace the following with your personalized selections
 
@@ -74,13 +78,19 @@ You can simply replace the following with your personalized selections
 # make your personalized card 
 # choose your function -> https://github.com/koenderks/aRtsy/tree/development
 
+<<<<<<< HEAD
 keita <- yourfunctionhere( # replace with your actual function
   colors = ,#yourcolorshere
   resolution = 300) + #keep this at 300 to reduce render time
   ggtitle("Your Name Here") + # type your name here
+=======
+rose <- canvas_collatz( # replace with your actual function
+  colors = colorPalette("dark2")) + #keep this at 300 to reduce render time
+  ggtitle("Rose Schmitz") + # type your name here
+>>>>>>> a0bc78c29b5f07971c8c5ac701e89f38d0381d6f
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
-yourname
+rose
 # once you're happy with your selection, place your name in the ggarrange below
 # then save -> stage -> commit -> pull -> push!
 ```
@@ -89,7 +99,7 @@ yourname
 
 ```{r}
 ggpubr::ggarrange(EXAMPLE,
-                  scott
-                  # your name here
+                  scott,
+                  rose
                   )
 ```
