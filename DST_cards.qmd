@@ -15,6 +15,9 @@ editor: visual
 
 library(aRtsy)
 library(ggplot2)
+
+install.packages(calecopal)
+library(calecopal)
 ```
 
 ## EXAMPLE
@@ -42,12 +45,39 @@ EXAMPLE
 Here's my contribution
 
 ```{r}
+HEAD
 
 
 Jennifer
 ```
 
 ## Your Name Here
+=======
+
+#>>>>>>> 9869b6b3699669aa53e9b335da273cd2156eb7e8
+# Let's say "Hello World" in an artistic way using an algorithmically generated manner!
+set.seed(95605) #choose whatever number you want. I chose my zip code
+
+# make your personalized card 
+# choose from a large number of options! https://github.com/koenderks/aRtsy/tree/development
+keita <- canvas_chladni( #replace your name
+  #choose a palette 
+  #colors = colorPalette("tuscany1"),  #default
+  # See options with ?colorPallete. Or choose whatever colors you want with names/hex codes/other packages!
+  colors = calecopal::cal_palette("superbloom3", n = 5),
+  waves = 5,
+  warp = 0.4,
+  angles = "perlin",
+  distances = "perlin",
+  resolution = 300) + #keep this at 300 to reduce render time
+  ggtitle("Scott Coffin") + # type your name here
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+
+keita
+```
+
+**Paint smoke**
+>>>>>>> cb70ebed7b55dfeeb5145a79d29da657ba00c419
 
 You can simply replace the following with your personalized selections
 
@@ -58,12 +88,45 @@ You can simply replace the following with your personalized selections
 # make your personalized card 
 # choose your function -> https://github.com/koenderks/aRtsy/tree/development
 
+set.seed(95835)
 Jennifer <- canvas_ant(colors = colorPalette("house") ,#yourcolorshere
   resolution = 300) + #keep this at 300 to reduce render time
   ggtitle("Jennifer") + # type your name here
   theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
 
 Jennifer
+
+set.seed(760)
+mysmoke <- canvas_smoke(
+  colors = colorPalette("random", n=600),# replace with your actual function
+#yourcolorshere
+  resolution = 300) + #keep this at 300 to reduce render time
+  ggtitle("Jing's Smoke") + # type your name here
+  theme(plot.title = element_text(hjust = 0.2, face = "bold", size = 16)) # keep this for nice formatting
+
+mysmoke
+
+laurelplummer <- canvas_maze() +# replace with your actual function
+  #colors = ,#yourcolorshere
+  #resolution = 200) + #keep this at 300 to reduce render time
+  ggtitle("Laurel") + # type your name here
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+laurelplummer
+
+keita <- canvas_chladni(  # replace with your actual function
+ colors = colorPalette("dark2")) + #yourcolorshere
+  #resolution = 300) + #keep this at 300 to reduce render time
+  ggtitle("Keita")  # type your name here
+keita
+
+rose <- canvas_collatz( # replace with your actual function
+  colors = colorPalette("dark2")) + #keep this at 300 to reduce render time
+  ggtitle("Rose Schmitz") + # type your name here
+  theme(plot.title = element_text(hjust = 0.5, face = "bold", size = 24)) # keep this for nice formatting
+rose
+
+
+cb70ebed7b55dfeeb5145a79d29da657ba00c419
 # once you're happy with your selection, place your name in the ggarrange below
 # then save -> stage -> commit -> pull -> push!
 ```
@@ -72,7 +135,19 @@ Jennifer
 
 ```{r}
 ggpubr::ggarrange(EXAMPLE,
+                
                   Jennifer
                   # your name here
                   )
+
+
+                
+
+                  
+                
+                
+                  
+          
+
+cb70ebed7b55dfeeb5145a79d29da657ba00c419
 ```
